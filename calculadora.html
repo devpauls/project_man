@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="utf-8"/>
+       <title>Entendo a estrutura e semântica do HTML5</title>
+   </head>
+   <body>
+       <form id="formulario">
+			<p>Descubra qual o seu desconto</p>
+
+			<label for="valor">Digite o preco</label>
+			<input type="text" name="valor" style="width:80px;"/></br>
+
+			<label for="desconto">Digite o desconto</label>
+			<input type="text" name="desconto" style="width:40px;"/></br>
+
+			<label for="resultado">Resultado</label>
+			<input type="text" name="resultado" style="width:70px;"/></br>
+	        
+	        <a href="#" id="myBtn">descobrir</a>
+       </form>
+       <script type='text/javascript'>
+	    	document.getElementById("myBtn").addEventListener("click", function(){
+	    		var formulario = document.getElementById('formulario');
+                        var valor = +formulario.valor.value;
+                        var desconto = +formulario.desconto.value;
+                        var resultado = valor / 100 * desconto - valor;
+			            formulario.resultado.value = resultado  + "reais";		
+	    	});
+        </script>
+   </body>
+</html>
