@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="utf-8"/>
+       <title>Entendo a estrutura e semântica do HTML5</title>
+       <script type='text/javascript'>
+
+       var frutas = ["banana", "buceta", "cuzinho", "peitinho" , 145];
+         function carregarInfo (elem, ind, obj) {
+                  return(typeof elem == "string");                  
+              }
+
+              alert(frutas.every(carregarInfo));
+
+
+       </script>
+
+       <style>
+          form{
+            width: 17%;
+          }
+
+          label{
+            text-align: right;
+            width: 37%;
+            display: inline-flex;
+          }
+
+          textarea{
+            height: 100px;
+            width: 203%
+          }
+       </style>
+   </head>
+   <body> 
+      <div>
+        <img src="mocorongo.jpg">
+          <form id="formulario">
+            <label for="name">name:</label>
+            <input type="text" name="name"/>
+          </form>
+          <a href="#" onclick="carregarInfo();"> solicitar infos</a>
+      </div>
+   </body>
+</html>
+	

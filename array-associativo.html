@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="utf-8"/>
+       <title>Entendo a estrutura e semântica do HTML5</title>
+       <script type='text/javascript'>
+
+        var ficha = {nome:"hamid san", idade:"36", sexo:"masculino"}
+
+        function carregarInfo () {
+            var formulario = document.getElementById("formulario");
+            var infon = document.getElementById("criminal").innerHTML = "sujo e perigoso, usa metodos medievais de tortura cor de rosa, armas de borrachas com balas coloridas e charmosas, foi visto pela ultima vez em santos, na barraca do seu ze, comendo camarao e tomando xotes de caipirinhas";
+          
+            var name = formulario.names.value = ficha.nome;
+            var ages = formulario.age.value = ficha.idade;
+            var sex =  formulario.sex.value = ficha.sexo;
+        }
+       </script>
+
+       <style>
+          form{
+            width: 17%;
+          }
+
+          label{
+            text-align: right;
+            width: 37%;
+            display: inline-flex;
+          }
+
+          textarea{
+            height: 100px;
+            width: 203%
+          }
+       </style>
+   </head>
+   <body> 
+      <div>
+        <img src="mocorongo.jpg">
+          <form id="formulario">
+            <label for="name">name:</label>
+            <input type="text" name="names"/>
+
+            <label for="idade">idade:</label>
+            <input type="text" name="age"/>
+
+            <label for="sexo">sexo:</label>
+            <input type="text" name="sex"/>
+            <label for="ficha">ficha criminal</label>
+            <textarea id="criminal"></textarea>
+          </form>
+          <a href="#" onclick="carregarInfo();"> solicitar infos</a>
+      </div>
+   </body>
+</html>
+	
